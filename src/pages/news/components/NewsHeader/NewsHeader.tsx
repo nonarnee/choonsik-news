@@ -1,8 +1,8 @@
 import { Link } from 'react-router';
 
-import styles from './NewsHeader.module.css';
-
 import logo from '@/assets/images/choonsik-emoji.gif';
+
+import styles from './NewsHeader.module.css';
 
 export default function NewsHeader() {
   return (

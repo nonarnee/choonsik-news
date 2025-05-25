@@ -47,6 +47,8 @@ export default [
       'react-refresh': reactRefreshPlugin,
     },
     rules: {
+      'no-unused-vars': ['error', { args: 'none' }],
+
       // TypeScript
       ...tseslint.configs.recommended.rules,
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
@@ -68,6 +70,13 @@ export default [
         'warn',
         {
           groups: [['builtin', 'external'], 'internal', ['parent', 'sibling', 'index']],
+          pathGroups: [
+            {
+              pattern: '@/**',
+              group: 'external',
+              position: 'after',
+            },
+          ],
           'newlines-between': 'always',
           alphabetize: { order: 'asc', caseInsensitive: true },
         },

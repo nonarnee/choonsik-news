@@ -1,0 +1,171 @@
+.carouselContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel {
+  width: 100%;
+  position: relative;
+}
+
+.carouselViewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 10px;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.slide {
+  width: 90%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slidePlaceholder {
+  min-width: 90%;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.carouselSlide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.carouselSlide.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.carouselSlide:not(.active) {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.controlButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+}
+.controlButton:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.prevButton {
+  left: calc(5% + 10px);
+}
+.nextButton {
+  right: calc(5% + 10px);
+}
+
+/* 인디케이터 */
+.indicatorWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.indicatorTrack {
+  display: inline-flex;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-kakao-black);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.indicator.active {
+  background-color: var(--color-kakao-yellow);
+  color: var(--color-kakao-black);
+}
+
+.indicatorPageButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  border-radius: 32px;
+  background-color: var(--color-kakao-black);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+.indicatorPageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.counter {
+  display: inline-block;
+  font-size: 0.875rem;
+  margin-left: 12px;
+  color: #333;
+}
+
+@media (max-width: 480px) {
+  .controlButton {
+    display: none;
+  }
+
+  .carouselControl {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .carouselIndicators {
+    margin-top: 10px;
+    gap: 4px;
+  }
+
+  .indicator {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+}

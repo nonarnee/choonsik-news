@@ -1,0 +1,45 @@
+.container {
+  margin-top: 32px;
+}
+
+.headlineNews {
+  width: 100%;
+  height: 300px;
+  text-decoration: none;
+}
+
+.headlineNews::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.headlineNews article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  padding: 32px 48px;
+}
+
+.headlineNews figure {
+  position: absolute;
+  inset: 0;
+}
+
+.headlineNews figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.headlineNews div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+  color: var(--color-white);
+}

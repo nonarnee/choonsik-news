@@ -1,7 +1,7 @@
 .header {
   position: relative;
-  border-bottom: 3px solid var(--kakao-yellow);
-  margin: 0 32px 16px;
+  border-bottom: 3px solid var(--color-kakao-yellow);
+  margin: 0 32px;
   padding: 16px 0;
 }
 
