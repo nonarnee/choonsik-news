@@ -78,6 +78,10 @@
     flex-direction: column;
   }
 
+  .newsItem div {
+    min-height: 100px;
+  }
+
   .newsItem figure {
     width: 100%;
   }

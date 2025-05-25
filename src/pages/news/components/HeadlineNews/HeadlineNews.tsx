@@ -14,7 +14,14 @@ export default function HeadlineNews() {
     >
       <article>
         <figure>
-          <img src={news.thumbnail} alt={`${news.title} 이미지`} />
+          <img
+            src={news.thumbnail}
+            alt={`${news.title} 이미지`}
+            loading="eager"
+            decoding="async"
+            width={500}
+            height={500}
+          />
         </figure>
         <div>
           <h2>{news.title}</h2>

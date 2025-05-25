@@ -59,7 +59,7 @@ export default function CarouselIndicators() {
   }, [page, realIndex]);
 
   return (
-    <div className={styles.indicatorWrapper} role="tablist" aria-label="슬라이드 인디케이터">
+    <div className={styles.indicatorWrapper} aria-label="슬라이드 인디케이터">
       {showPagination && (
         <>
           <button
@@ -81,7 +81,7 @@ export default function CarouselIndicators() {
         </>
       )}
 
-      <div className={styles.indicatorTrack}>
+      <div role="tablist" className={styles.indicatorTrack}>
         {indicators.slice(page * slidesPerPage, (page + 1) * slidesPerPage).map((indicator) => (
           <button
             key={indicator.index}

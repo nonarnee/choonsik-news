@@ -10,7 +10,14 @@ export default function CommonNewsItem({ newsItem }: CommonNewsItemProps) {
     <article className={styles.newsItem}>
       <a href={newsItem.url} target="_blank" rel="noopener noreferrer" aria-label={newsItem.title}>
         <figure>
-          <img src={newsItem.thumbnail} loading="lazy" alt={`${newsItem.title} 이미지`} />
+          <img
+            src={newsItem.thumbnail}
+            loading="lazy"
+            decoding="async"
+            alt={`${newsItem.title} 이미지`}
+            width={500}
+            height={500}
+          />
         </figure>
         <div>
           <h2>{newsItem.title}</h2>
